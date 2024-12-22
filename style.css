@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1,h2{
+    font-family: "Shippori Mincho", serif;
+}
+
+/* more classes */
+.text-primary{
+    color: #FF8343;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+
+}
+/* end more classes */
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: #F1DEC6;
+    height: 100vh;
+}
+header .navbar{
+    background-color: white;
+    border-bottom: #ccc 1px solid;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+header .navbar nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 1.5rem 2rem;
+}
+
+header .navbar nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header .navbar nav ul a{
+    margin: 0 15px;
+    font-weight: 600;
+    color: black;
+    font-size: 19px;
+}
+header #logo{
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+header .navbar nav ul a:hover{
+    border-bottom: 3px solid #FF8343;
+    padding: 10px;
+}
+
+/* ------------------header content ------------------ */
+header .header-content{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1100px;
+    /* background-color: red; */
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    padding: 5rem 2rem 0;
+}
+header .header-content img{
+    max-width: 560px;
+    border-radius: 20px;
+    border-right: 4px solid #FF8343;
+    border-bottom: 4px solid #FF8343;
+    transition: all 0.7 ease;
+}
+header .header-content img:hover{
+    transform: scale(1.04);
+    box-shadow: 10px 5px 5px black;
+}
+
+header .header-content p span{
+    font-weight: 700;
+    font-size: 25px;
+}
+header .header-content h1{
+    font-size: 50px;
+    text-shadow: 3px 5px 3px rgb(0, 0, 0, 0.3);
+    margin: 5px;
+}
+header .header-content .title{
+    font-size: 25px;
+    color: #FF8343;
+    margin: 10px 0;
+    font-weight: 500;
+}
+header .header-content .social{
+    margin: 1rem 0 2rem;
+}
+header .header-content .social a i{
+    font-size: 18px;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+header .header-content .social a i:hover{
+    transform: scale(0.85);
+}
+header .header-content .content-text{
+    margin-bottom: 3rem;
+}
+.btn-primary{
+    background-color: #FF8343;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 1s ease;
+}
+.btn-primary:hover{
+    background-color: gray;
+}
+
+/* -----------------------about start -------------------------- */
+
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+section hr{
+    width: 100px;
+    height: 3px;
+    background-color: #FF8343;
+    border: none;
+    margin: 5px auto 0;
+}
+section .about-content{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+}
+section .about-content .col-1 h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+section .about-content .col-1 p{
+    color: gray;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+section .about-content .col-2 p{
+    margin-bottom: 20px;
+    font-size: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid gray;
+}
+
+/* -------------skiills about ------------ */
+#skills{
+    background-color: #FF8343;
+}
+#skills .row img{
+    max-width: 40px;
+}
+.text-white{
+    color: white;
+}
+#skills .hr-white{
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    border: none;
+    margin: 5px auto 0;
+}
+
+#skills .skills-content{
+    background-color: #F1DEC6;
+    margin-top: 2rem;
+}
+#skills .skills-content .row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+}
+#skills .skills-content .row .item{
+    margin: 35px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    transition: all 0.8s ease;
+}
+
+/* max-width عشان الصور مش متساوية  */
+#skills .skills-content .row .item:nth-child(1) img {
+    max-width: 50px;
+}
+#skills .skills-content .row .item:nth-child(3) img{
+    max-width: 50px;
+}
+#skills .skills-content .row .item:nth-child(4) img{
+    max-width: 50px;
+}
+#skills .skills-content .row .item:nth-child(6) img{
+    max-width: 60px;
+}
+/* ---------------------------------------- */
+
+#skills .skills-content .row .item:hover{
+    box-shadow: 10px 15px 10px #FF8343;
+}
+
+/* --------------------services---------------------------------- */
+
+#service .row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 4rem;
+    text-align: center;
+
+    /* gap ال عشان نعلم مسافات  */
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+#service .row .item{
+    background-color: #FF8343;
+    padding: 30px 15px;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 5px; 
+    transition: all 0.6 ease;
+}
+
+#service .row .item i{
+    color: white;
+    font-size: 30px;
+    margin: 20px 0;
+}
+#service .row .item h3{
+   margin: 18px 0;
+   font-size: 30px;
+}
+#service .row .item p{
+    margin: 20px 0;
+    font-weight: 500;
+}
+#service .row .item:hover{
+    transform: scale(1.09);
+}
+
+/* ----------------------portof;io-------------------- */
+#portfolio{
+    background-color: #FF8343;
+}
+#portfolio .row .item img{
+    max-width: 100%;
+    margin: auto;
+    display: block;
+    border-bottom: 2px solid gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#portfolio .hr-white{
+    width: 100px;
+    height: 3px;
+    background-color: white;
+    border: none;
+    margin: 5px auto 0;
+}
+#portfolio .row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+#portfolio .row .item{
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.6 ease;
+}
+
+#portfolio .row .item:hover{
+    transform: scale(1.04);
+    box-shadow: 10px 15px 10px black;
+}
+
+#portfolio .row .item .item-content{
+    padding: 20px 15px 30px;
+}
+#portfolio .row .item .item-content h3{
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+#portfolio .row .item .item-content a{
+    color: #FF8343;
+    font-weight: 600;
+}
+
+/* --------------------------------------contact-------------------- */
+#contact{
+    padding: 4rem;
+    background-color: gainsboro;
+    margin-top: 5rem;
+    
+}
+#contact .row{
+    margin-top: 4rem;
+    display: grid;
+    /* grid-template-columns: repeat(2,1fr); */
+}
+
+#contact .row input{
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+   border: 2px solid #FF8343;
+   padding: 2rem 1rem;
+   text-align: center;
+   box-shadow: 3px 3px 5px black;
+
+}
+#contact .row textarea{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 2px solid #FF8343;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 3px 3px 5px black;
+}
+/* #contact .row img{
+    width: 500px;
+    margin-right: 7rem;
+    border: 2px solid #FF8343;
+    box-shadow: 3px 3px 5px black;
+} */
+#contact .row .btn-primary{
+    margin: 20px auto;
+    width: 100%;
+    border: none;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* ----------------footer------------- */
+#footer{
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* ----------------responsive--------------------- */
+
+/* tablet resbonsive */
+@media(max-width:768px){
+    header .navbar nav{
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar nav ul{
+        margin-top: 10px;
+    }
+
+    header .navbar nav ul a{
+        margin: 0 8px;
+    }
+
+    header .header-content{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    header .header-content img{
+        max-width: 300px;
+        margin-bottom: 3rem;
+        margin: auto;
+    }
+
+    header .header-content .content-text{
+        margin-bottom: 0rem;
+        margin-top: 5rem;
+    }
+
+
+
+    section .about-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+
+    #service .row{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #portfolio .row{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    #contact .row{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    #contact .row input{
+        margin: 20px auto;
+        align-items: center;
+    }
+}
+
+/* mobile  */
+
+@media (max-width:528px){
+    header .header-content h1{
+        font-size: 35px;
+    }
+    header .header-content p span{
+        font-size: 16px;
+    }
+    header .header-content .title{
+        font-size: 16px;
+    }
+    header .header-content img{
+        margin-top: 2rem;
+        max-width: 250px;
+    }
+
+    section h2{
+        font-size: 20px;
+    }
+    section .about-content .col-1 h3{
+        font-size: 20px;
+    }
+
+    #service .row, #portfolio .row, #contact .row{
+        grid-template-columns: 1fr;
+    }
+
+    #skills .skills-content .row{
+        grid-template-columns: 1fr;
+    }
+
+
+    #contact .row{
+        grid-template-columns: 1fr;
+    }
+    #contact .row input{
+        font-size: 10px;
+    }
+    #contact{
+        padding: 1rem;
+    }
+    #contact .row img{
+        gap: 1rem;
+    }
+}
